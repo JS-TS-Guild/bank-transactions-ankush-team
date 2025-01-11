@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "vitest",
-    "test-run-first": "vitest run simple.test.ts",
-    "test-run-second": "vitest run real.test.ts"
+    "test:watch": "vitest --watch",
+    "test": "vitest run",
+    "test-run-basic": "vitest run simple.test.ts",
+    "test-run-real": "vitest run real.test.ts",
+    "test-run-final": "curl -o bank-transactions.test.ts ${TESTS_FOLDER}/bank-transactions.test.ts && vitest run bank-transactions.test.ts && rm bank-transactions.test.ts"
   },
   "type": "module",
   "keywords": [],
